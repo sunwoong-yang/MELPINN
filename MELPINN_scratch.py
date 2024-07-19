@@ -1,6 +1,6 @@
 import subprocess
 import sys
-
+import argparse
 
 def install(package):
 	subprocess.check_call([sys.executable, "-m", "pip", "install", package])
@@ -36,27 +36,37 @@ if device.type == 'cuda':
 	gpu_name = torch.cuda.get_device_name(0)
 	print('GPU name:', gpu_name)
 
+# Argument parsing
+parser = argparse.ArgumentParser(description='Train a Physics-Informed Neural Network (PINN).')
+parser.add_argument('-e', '--epochs', type=int, default=5000, help='Number of epochs for training.')
+parser.add_argument('-N', '--N_collo', type=int, default=5000, help='Number of collocation points.')
+parser.add_argument('-hl', '--hidden_layers', type=int, nargs='+', default=[64] * 7, help='List of hidden layers sizes.')
+parser.add_argument('-t', '--end_time', type=int, default=2758, help='End time for the simulation.')
+parser.add_argument('-BC', '--use_hard_BC', type=str, default='False', help='Use hard boundary conditions (True/False).')
+
+args = parser.parse_args()
+
 N_tank = 6
-epochs = 50000
-N_collo = 5000
-hidden_layers = [64] * 7
-end_time = 2758
-use_hard_BC = True
+epochs = args.epochs
+N_collo = args.N_collo
+hidden_layers = args.hidden_layers
+end_time = args.end_time
+use_hard_BC = args.use_hard_BC.lower() in ['t', 'true']
 
+# Construct the folder name based on the argument values
+folder_name = f"figures/e{epochs}-N{N_collo}-hl{'x'.join(map(str, hidden_layers))}-t{end_time}-BC{use_hard_BC}"
 
-# Function to clear the /figures directory
-def make_or_clear_figures_directory():
-	os.makedirs('figures', exist_ok=True)
+# Function to clear the specified directory or create it if it does not exist
+def make_or_clear_figures_directory(folder_name):
+	os.makedirs(folder_name, exist_ok=True)
 
-	for file in os.listdir('figures'):
-		file_path = os.path.join('figures', file)
+	for file in os.listdir(folder_name):
+		file_path = os.path.join(folder_name, file)
 		if os.path.isfile(file_path):
 			os.unlink(file_path)
 
-
-# Clear the /figures directory
-make_or_clear_figures_directory()
-
+# Clear or create the specified figures directory
+make_or_clear_figures_directory(folder_name)
 
 # Neural Network Definition
 class PINN(nn.Module):
@@ -83,7 +93,7 @@ class PINN(nn.Module):
 		u = self.network(t)
 		if self.hard_BC is not None:
 			u = hard_BC(t, u)
-		return u
+		return torch.abs(u)
 
 
 # Define the PDE residual
@@ -137,9 +147,9 @@ def hard_BC(t, u):
 	transformed_u = []
 	for u_idx in range(u.shape[1]):
 		if u_idx == N_tank - 1:  # for the first tank, height IC is imposed as 2.
-			transformed_u.append(torch.abs(2. - t * u[:, [u_idx]]))  # 2 - t * height of 1st tank
+			transformed_u.append(2. - t * u[:, [u_idx]])  # 2 - t * height of 1st tank
 		else:  # for other tanks, velocity/height IC is imposed as 0.
-			transformed_u.append(torch.abs(t * u[:, [u_idx]]))  # t * (velocity or height)
+			transformed_u.append(t * u[:, [u_idx]])  # t * (velocity or height)
 	# Reason for torch.abs -> to prevent the velocity/height from being negative values
 	return torch.hstack(transformed_u)
 
@@ -155,7 +165,7 @@ def train_pinn(weights=None, use_hard_BC=True, epochs=30000, N_collo=2000, end_t
 	hard_BC_func = hard_BC if use_hard_BC else None
 	net = PINN(hard_BC=hard_BC_func, hidden_layers=hidden_layers)
 	optimizer = optim.Adam(net.parameters(), lr=1e-3)
-	scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=1000, gamma=0.9)
+	scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=1000, gamma=0.88)
 
 	# Clear the content of the file at the start
 	with open('figures/tank_height.txt', 'w') as file:
@@ -165,6 +175,9 @@ def train_pinn(weights=None, use_hard_BC=True, epochs=30000, N_collo=2000, end_t
 	t_lower_bound, t_upper_bound = 0, end_time
 	t_collocation = (t_upper_bound - t_lower_bound) * torch.rand((N_collo, 1)) + t_lower_bound
 	t_collocation.requires_grad = True
+
+	# Initial condition points
+	t_ic = torch.zeros((N_collo, 1), requires_grad=True)
 
 	start_time = time.time()  # Start time
 
@@ -190,11 +203,20 @@ def train_pinn(weights=None, use_hard_BC=True, epochs=30000, N_collo=2000, end_t
 		loss_continuity5 = nn.MSELoss()(continuity5, torch.zeros_like(continuity5))
 		loss_continuity6 = nn.MSELoss()(continuity6, torch.zeros_like(continuity6))
 
+		# Initial condition loss
+		if not use_hard_BC:
+			u_ic = net(t_ic)
+			loss_ic = nn.MSELoss()(u_ic[:, :N_tank - 1], torch.zeros_like(u_ic[:, :N_tank - 1])) + \
+			          nn.MSELoss()(u_ic[:, N_tank - 1], torch.ones_like(u_ic[:, N_tank - 1]) * 2) + \
+			          nn.MSELoss()(u_ic[:, N_tank:], torch.zeros_like(u_ic[:, N_tank:]))
+		else:
+			loss_ic = 0
+
 		# Apply weights to individual losses
 		loss = (weights[0] * loss_momentum1 + weights[1] * loss_momentum2 + weights[2] * loss_momentum3 +
 		        weights[3] * loss_momentum4 + weights[4] * loss_momentum5 + weights[5] * loss_continuity1 +
 		        weights[6] * loss_continuity2 + weights[7] * loss_continuity3 + weights[8] * loss_continuity4 +
-		        weights[9] * loss_continuity5 + weights[10] * loss_continuity6)
+		        weights[9] * loss_continuity5 + weights[10] * loss_continuity6) + loss_ic
 
 		loss.backward()  # No need to retain the graph now
 		optimizer.step()
@@ -203,7 +225,8 @@ def train_pinn(weights=None, use_hard_BC=True, epochs=30000, N_collo=2000, end_t
 		losses = {
 			'Total Loss': loss.item(),
 			'Momentum Losses': f'{loss_momentum1.item():.4f}, {loss_momentum2.item():.4f}, {loss_momentum3.item():.4f}, {loss_momentum4.item():.4f}, {loss_momentum5.item():.4f}',
-			'Continuity Losses': f'{loss_continuity1.item():.4f}, {loss_continuity2.item():.4f}, {loss_continuity3.item():.4f}, {loss_continuity4.item():.4f}, {loss_continuity5.item():.4f}, {loss_continuity6.item():.4f}'
+			'Continuity Losses': f'{loss_continuity1.item():.4f}, {loss_continuity2.item():.4f}, {loss_continuity3.item():.4f}, {loss_continuity4.item():.4f}, {loss_continuity5.item():.4f}, {loss_continuity6.item():.4f}',
+			'IC Losses': f'{loss_ic.item():.4f}' if not use_hard_BC else 'N/A'
 		}
 
 		progress_bar.set_postfix(losses)
@@ -221,7 +244,7 @@ def save_results(net, input, epoch=None, losses=None):
     input = torch.tensor([[input]], dtype=torch.float32)
     final_results = net(input).squeeze().detach().cpu().numpy()
 
-    with open('figures/tank_height.txt', 'a') as file:
+    with open(f'{folder_name}/tank_height.txt', 'a') as file:
         if epoch is not None:
             file.write(f"epoch={epoch}\n")
         for tank in range(N_tank):
@@ -231,6 +254,7 @@ def save_results(net, input, epoch=None, losses=None):
             file.write(f"Total Loss: {losses['Total Loss']:.4f}\n")
             file.write(f"Momentum Losses: {losses['Momentum Losses']}\n")
             file.write(f"Continuity Losses: {losses['Continuity Losses']}\n")
+            file.write(f"IC Losses: {losses['IC Losses']}\n")
             file.write("\n")
 
     if epoch is not None:
@@ -240,35 +264,34 @@ def save_results(net, input, epoch=None, losses=None):
 
 
 def plot_heights(net, t_end=3000, epoch=None):
-	t_start = 0
-	t_values = np.linspace(t_start, t_end, t_end)
-	heights = np.zeros((t_end, N_tank))
+    t_start = 0
+    t_values = np.linspace(t_start, t_end, t_end)
+    heights = np.zeros((t_end, N_tank))
 
-	for i, t in enumerate(t_values):
-		input = torch.tensor([[t]], dtype=torch.float32)
-		u_pred = net(input).squeeze().detach().numpy()
-		heights[i, :] = u_pred[N_tank - 1:]
+    for i, t in enumerate(t_values):
+        input = torch.tensor([[t]], dtype=torch.float32)
+        u_pred = net(input).squeeze().detach().numpy()
+        heights[i, :] = u_pred[N_tank - 1:]
 
-	plt.figure(figsize=(10, 6))
-	for tank in range(N_tank):
-		plt.plot(t_values, heights[:, tank], label=f'Tank {tank + 1} Height')
+    plt.figure(figsize=(10, 6))
+    for tank in range(N_tank):
+        plt.plot(t_values, heights[:, tank], label=f'Tank {tank + 1} Height')
 
-	plt.xlabel('Time (seconds)', fontsize=20)
-	plt.ylabel('Height', fontsize=20)
-	plt.title('Tank Heights Over Time', fontsize=24)
-	plt.legend(fontsize=16)
+    plt.xlabel('Time (seconds)', fontsize=20)
+    plt.ylabel('Height', fontsize=20)
+    plt.title('Tank Heights Over Time', fontsize=24)
+    plt.legend(fontsize=16)
 
-	if epoch is not None:
-		plt.title(f'Tank Heights Over Time (End of Epoch {epoch})', fontsize=24)
-		plt.savefig(f'figures/heights_epoch_{epoch}.png', dpi=300)
-	else:
-		plt.savefig('figures/Final_heights.png', dpi=300)
+    if epoch is not None:
+        plt.title(f'Tank Heights Over Time (End of Epoch {epoch})', fontsize=24)
+        plt.savefig(f'{folder_name}/heights_epoch_{epoch}.png', dpi=300)
+    else:
+        plt.savefig(f'{folder_name}/Final_heights.png', dpi=300)
 
-	plt.xticks(fontsize=16)
-	plt.yticks(fontsize=16)
-	plt.show()
-	plt.close()
-
+    plt.xticks(fontsize=16)
+    plt.yticks(fontsize=16)
+    plt.show()
+    plt.close()
 
 # Train and validate the model
 net = train_pinn(weights=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], use_hard_BC=use_hard_BC, epochs=epochs, N_collo=N_collo,
