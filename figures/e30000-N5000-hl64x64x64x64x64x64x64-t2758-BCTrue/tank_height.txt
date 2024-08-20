@@ -1,0 +1,9 @@
+epoch=0
+Tank 1 height: 175.227814
+Tank 2 height: 48.630589
+
+Total Loss: 201170832.0000
+Momentum Losses: 123784832.0000
+Continuity Losses: 63820072.0000, 13565936.0000
+IC Losses: N/A
+

@@ -78,10 +78,11 @@ folder_name = (
 	f"-hl{hidden_layers_str}-t{end_time}-BC{use_hard_BC}"
 	f"-lr[{scheduler_step}, {scheduler_gamma}]"
 	f"-lossW[{momentum_weight}, {continuity_weight}]"
-	f"-af{activation_function}"
+	f"-af[{activation_function}]"
 )
 
 # Function to clear the specified directory or create it if it does not exist
+# If the folder_name defined by the arguments exist, delete all files in that already existing directory
 def make_or_clear_figures_directory(folder_name):
 	os.makedirs(folder_name, exist_ok=True)
 	for file in os.listdir(folder_name):
@@ -110,7 +111,7 @@ class PINN(nn.Module):
 	def __init__(self, hard_BC, hidden_layers, activation_function):
 		super(PINN, self).__init__()
 		layers = []
-		input_dim = 1
+		input_dim = 1 # TIME variable
 		activation = get_activation_function(activation_function)  # Use the selected activation function
 
 		# Define the hidden layers
@@ -120,6 +121,7 @@ class PINN(nn.Module):
 			input_dim = hidden_dim
 
 		# Define the output layer
+		# The number of final output nodes is : 2 * N_tank - 1 (momentum eqn: N_tank - 1, continuity eqn: N_tank)
 		layers.append(nn.Linear(input_dim, 2 * N_tank - 1))
 
 		self.network = nn.Sequential(*layers)
@@ -157,6 +159,7 @@ def residual(net, t):
 	# Calculate gradients dynamically
 	du_dt = [torch.autograd.grad(u[:, i], t, grad_outputs=torch.ones_like(u[:, i], device=device), create_graph=True)[0]
 	         for i in range(u.shape[1])]
+
 	a_void = [void_fraction(height[:, [i]]) for i in range(N_tank - 1)]
 
 	# Dynamically calculate momentum equations

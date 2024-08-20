@@ -1,0 +1,644 @@
+epoch=1000
+Tank 1 height: 0.020484
+Tank 2 height: 0.000018
+Tank 3 height: 0.000027
+Tank 4 height: 0.000007
+Tank 5 height: 0.000046
+Tank 6 height: 0.000561
+
+Total Loss: 3.9544
+Momentum Losses: 0.0404, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0015, 0.0000, 0.0001, 0.0001, 0.0003, 0.0001
+IC Losses: 3.9119
+
+epoch=2000
+Tank 1 height: 0.020233
+Tank 2 height: 0.000117
+Tank 3 height: 0.000011
+Tank 4 height: 0.000006
+Tank 5 height: 0.000051
+Tank 6 height: 0.000833
+
+Total Loss: 3.9350
+Momentum Losses: 0.0399, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0027, 0.0001, 0.0000, 0.0001, 0.0000, 0.0000
+IC Losses: 3.8922
+
+epoch=3000
+Tank 1 height: 0.020049
+Tank 2 height: 0.000092
+Tank 3 height: 0.000046
+Tank 4 height: 0.000001
+Tank 5 height: 0.000032
+Tank 6 height: 0.000548
+
+Total Loss: 3.9171
+Momentum Losses: 0.0393, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0046, 0.0001, 0.0001, 0.0002, 0.0000, 0.0000
+IC Losses: 3.8728
+
+epoch=4000
+Tank 1 height: 0.019004
+Tank 2 height: 0.000124
+Tank 3 height: 0.000065
+Tank 4 height: 0.000075
+Tank 5 height: 0.000084
+Tank 6 height: 0.002907
+
+Total Loss: 3.7823
+Momentum Losses: 0.0359, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0096, 0.0002, 0.0002, 0.0008, 0.0001, 0.0000
+IC Losses: 3.7353
+
+epoch=5000
+Tank 1 height: 0.019585
+Tank 2 height: 0.000213
+Tank 3 height: 0.000094
+Tank 4 height: 0.000059
+Tank 5 height: 0.000485
+Tank 6 height: 0.004937
+
+Total Loss: 3.9391
+Momentum Losses: 0.0367, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0018, 0.0000, 0.0001, 0.0004, 0.0013, 0.0003
+IC Losses: 3.8984
+
+epoch=6000
+Tank 1 height: 0.009269
+Tank 2 height: 0.000130
+Tank 3 height: 0.000026
+Tank 4 height: 0.000313
+Tank 5 height: 0.000102
+Tank 6 height: 0.020949
+
+Total Loss: 1.6176
+Momentum Losses: 0.0086, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0488, 0.0000, 0.0003, 0.0022, 0.0001, 0.0001
+IC Losses: 1.5574
+
+epoch=7000
+Tank 1 height: 0.000021
+Tank 2 height: 0.000038
+Tank 3 height: 0.000047
+Tank 4 height: 0.000046
+Tank 5 height: 0.000032
+Tank 6 height: 0.036237
+
+Total Loss: 0.0035
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0034, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=8000
+Tank 1 height: 0.000016
+Tank 2 height: 0.000032
+Tank 3 height: 0.000044
+Tank 4 height: 0.000058
+Tank 5 height: 0.000056
+Tank 6 height: 0.029990
+
+Total Loss: 0.0013
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0013, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=9000
+Tank 1 height: 0.001327
+Tank 2 height: 0.000133
+Tank 3 height: 0.000262
+Tank 4 height: 0.000021
+Tank 5 height: 0.000036
+Tank 6 height: 0.015757
+
+Total Loss: 0.0076
+Momentum Losses: 0.0001, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0068, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0007
+
+epoch=10000
+Tank 1 height: 0.000023
+Tank 2 height: 0.000046
+Tank 3 height: 0.000005
+Tank 4 height: 0.000008
+Tank 5 height: 0.000044
+Tank 6 height: 0.010302
+
+Total Loss: 0.0003
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0002, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=11000
+Tank 1 height: 0.000112
+Tank 2 height: 0.000142
+Tank 3 height: 0.000211
+Tank 4 height: 0.000012
+Tank 5 height: 0.000125
+Tank 6 height: 0.001023
+
+Total Loss: 0.0002
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0001, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=12000
+Tank 1 height: 0.000006
+Tank 2 height: 0.000169
+Tank 3 height: 0.000117
+Tank 4 height: 0.000202
+Tank 5 height: 0.000143
+Tank 6 height: 0.010022
+
+Total Loss: 0.0001
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0001, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=13000
+Tank 1 height: 0.005371
+Tank 2 height: 0.000909
+Tank 3 height: 0.000581
+Tank 4 height: 0.000279
+Tank 5 height: 0.000361
+Tank 6 height: 0.018552
+
+Total Loss: 0.0143
+Momentum Losses: 0.0042, 0.0001, 0.0000, 0.0001, 0.0000
+Continuity Losses: 0.0099, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=14000
+Tank 1 height: 0.000903
+Tank 2 height: 0.000028
+Tank 3 height: 0.000139
+Tank 4 height: 0.000092
+Tank 5 height: 0.000139
+Tank 6 height: 0.027649
+
+Total Loss: 0.0016
+Momentum Losses: 0.0005, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0011, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=15000
+Tank 1 height: 0.000758
+Tank 2 height: 0.000009
+Tank 3 height: 0.000022
+Tank 4 height: 0.000069
+Tank 5 height: 0.000101
+Tank 6 height: 0.033798
+
+Total Loss: 0.0002
+Momentum Losses: 0.0001, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0002, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=16000
+Tank 1 height: 0.000101
+Tank 2 height: 0.000094
+Tank 3 height: 0.000608
+Tank 4 height: 0.000112
+Tank 5 height: 0.000414
+Tank 6 height: 0.040176
+
+Total Loss: 0.0005
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0005, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=17000
+Tank 1 height: 0.000002
+Tank 2 height: 0.000000
+Tank 3 height: 0.000070
+Tank 4 height: 0.000018
+Tank 5 height: 0.000005
+Tank 6 height: 0.049337
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=18000
+Tank 1 height: 0.000070
+Tank 2 height: 0.000206
+Tank 3 height: 0.000446
+Tank 4 height: 0.000553
+Tank 5 height: 0.000248
+Tank 6 height: 0.049688
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=19000
+Tank 1 height: 0.001222
+Tank 2 height: 0.000095
+Tank 3 height: 0.000041
+Tank 4 height: 0.000562
+Tank 5 height: 0.000110
+Tank 6 height: 0.050981
+
+Total Loss: 0.0014
+Momentum Losses: 0.0003, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0011, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=20000
+Tank 1 height: 0.000136
+Tank 2 height: 0.000019
+Tank 3 height: 0.000011
+Tank 4 height: 0.000009
+Tank 5 height: 0.000027
+Tank 6 height: 0.052228
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=21000
+Tank 1 height: 0.000087
+Tank 2 height: 0.000002
+Tank 3 height: 0.000069
+Tank 4 height: 0.000008
+Tank 5 height: 0.000005
+Tank 6 height: 0.053377
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=22000
+Tank 1 height: 0.000227
+Tank 2 height: 0.000020
+Tank 3 height: 0.000021
+Tank 4 height: 0.000020
+Tank 5 height: 0.000051
+Tank 6 height: 0.054220
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=23000
+Tank 1 height: 0.000001
+Tank 2 height: 0.000002
+Tank 3 height: 0.000029
+Tank 4 height: 0.000013
+Tank 5 height: 0.000002
+Tank 6 height: 0.053942
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=24000
+Tank 1 height: 0.000071
+Tank 2 height: 0.000093
+Tank 3 height: 0.000293
+Tank 4 height: 0.000023
+Tank 5 height: 0.000099
+Tank 6 height: 0.054641
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=25000
+Tank 1 height: 0.000169
+Tank 2 height: 0.000049
+Tank 3 height: 0.000074
+Tank 4 height: 0.000010
+Tank 5 height: 0.000026
+Tank 6 height: 0.053789
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=26000
+Tank 1 height: 0.000270
+Tank 2 height: 0.000000
+Tank 3 height: 0.000011
+Tank 4 height: 0.000001
+Tank 5 height: 0.000002
+Tank 6 height: 0.053402
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=27000
+Tank 1 height: 0.000025
+Tank 2 height: 0.000012
+Tank 3 height: 0.000021
+Tank 4 height: 0.000011
+Tank 5 height: 0.000024
+Tank 6 height: 0.053005
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=28000
+Tank 1 height: 0.000048
+Tank 2 height: 0.000026
+Tank 3 height: 0.000272
+Tank 4 height: 0.000001
+Tank 5 height: 0.000226
+Tank 6 height: 0.052574
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=29000
+Tank 1 height: 0.000139
+Tank 2 height: 0.000084
+Tank 3 height: 0.000153
+Tank 4 height: 0.000011
+Tank 5 height: 0.000008
+Tank 6 height: 0.052246
+
+Total Loss: 0.0001
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=30000
+Tank 1 height: 0.000076
+Tank 2 height: 0.000004
+Tank 3 height: 0.000060
+Tank 4 height: 0.000032
+Tank 5 height: 0.000010
+Tank 6 height: 0.052007
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=31000
+Tank 1 height: 0.000038
+Tank 2 height: 0.000064
+Tank 3 height: 0.000163
+Tank 4 height: 0.000045
+Tank 5 height: 0.000061
+Tank 6 height: 0.051916
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=32000
+Tank 1 height: 0.000007
+Tank 2 height: 0.000029
+Tank 3 height: 0.000064
+Tank 4 height: 0.000050
+Tank 5 height: 0.000032
+Tank 6 height: 0.051594
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=33000
+Tank 1 height: 0.000091
+Tank 2 height: 0.000126
+Tank 3 height: 0.000075
+Tank 4 height: 0.000205
+Tank 5 height: 0.000101
+Tank 6 height: 0.051909
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=34000
+Tank 1 height: 0.000225
+Tank 2 height: 0.000090
+Tank 3 height: 0.000097
+Tank 4 height: 0.000021
+Tank 5 height: 0.000038
+Tank 6 height: 0.051404
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=35000
+Tank 1 height: 0.000038
+Tank 2 height: 0.000061
+Tank 3 height: 0.000076
+Tank 4 height: 0.000027
+Tank 5 height: 0.000021
+Tank 6 height: 0.051380
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=36000
+Tank 1 height: 0.000030
+Tank 2 height: 0.000233
+Tank 3 height: 0.000213
+Tank 4 height: 0.000173
+Tank 5 height: 0.000413
+Tank 6 height: 0.051601
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=37000
+Tank 1 height: 0.000072
+Tank 2 height: 0.000065
+Tank 3 height: 0.000048
+Tank 4 height: 0.000034
+Tank 5 height: 0.000018
+Tank 6 height: 0.050920
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=38000
+Tank 1 height: 0.000039
+Tank 2 height: 0.000052
+Tank 3 height: 0.000054
+Tank 4 height: 0.000052
+Tank 5 height: 0.000038
+Tank 6 height: 0.050729
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=39000
+Tank 1 height: 0.000068
+Tank 2 height: 0.000050
+Tank 3 height: 0.000053
+Tank 4 height: 0.000180
+Tank 5 height: 0.000051
+Tank 6 height: 0.050348
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=40000
+Tank 1 height: 0.000040
+Tank 2 height: 0.000077
+Tank 3 height: 0.000020
+Tank 4 height: 0.000020
+Tank 5 height: 0.000007
+Tank 6 height: 0.050214
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=41000
+Tank 1 height: 0.000033
+Tank 2 height: 0.000042
+Tank 3 height: 0.000049
+Tank 4 height: 0.000045
+Tank 5 height: 0.000035
+Tank 6 height: 0.050037
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=42000
+Tank 1 height: 0.000026
+Tank 2 height: 0.000039
+Tank 3 height: 0.000045
+Tank 4 height: 0.000043
+Tank 5 height: 0.000033
+Tank 6 height: 0.049802
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=43000
+Tank 1 height: 0.000035
+Tank 2 height: 0.000028
+Tank 3 height: 0.000029
+Tank 4 height: 0.000025
+Tank 5 height: 0.000020
+Tank 6 height: 0.049532
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=44000
+Tank 1 height: 0.000028
+Tank 2 height: 0.000039
+Tank 3 height: 0.000044
+Tank 4 height: 0.000044
+Tank 5 height: 0.000033
+Tank 6 height: 0.049462
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=45000
+Tank 1 height: 0.000082
+Tank 2 height: 0.000034
+Tank 3 height: 0.000032
+Tank 4 height: 0.000026
+Tank 5 height: 0.000022
+Tank 6 height: 0.049207
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=46000
+Tank 1 height: 0.000031
+Tank 2 height: 0.000032
+Tank 3 height: 0.000026
+Tank 4 height: 0.000020
+Tank 5 height: 0.000009
+Tank 6 height: 0.048989
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=47000
+Tank 1 height: 0.000013
+Tank 2 height: 0.000040
+Tank 3 height: 0.000029
+Tank 4 height: 0.000024
+Tank 5 height: 0.000017
+Tank 6 height: 0.048749
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=48000
+Tank 1 height: 0.000036
+Tank 2 height: 0.000049
+Tank 3 height: 0.000046
+Tank 4 height: 0.000036
+Tank 5 height: 0.000024
+Tank 6 height: 0.048616
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+epoch=49000
+Tank 1 height: 0.000021
+Tank 2 height: 0.000027
+Tank 3 height: 0.000027
+Tank 4 height: 0.000024
+Tank 5 height: 0.000018
+Tank 6 height: 0.048401
+
+Total Loss: 0.0000
+Momentum Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+Continuity Losses: 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000
+IC Losses: 0.0000
+
+Tank 1 height: 0.000013
+Tank 2 height: 0.000019
+Tank 3 height: 0.000019
+Tank 4 height: 0.000017
+Tank 5 height: 0.000013
+Tank 6 height: 0.048147
+

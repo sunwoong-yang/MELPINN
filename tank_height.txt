@@ -1,0 +1,14 @@
+epoch=0
+Tank 1 height: -1024.507568
+Tank 2 height: 834.597351
+Tank 3 height: 380.720215
+Tank 4 height: -824.446777
+Tank 5 height: -509.356781
+Tank 6 height: 391.745239
+epoch=500
+Tank 1 height: -0.071967
+Tank 2 height: -0.727671
+Tank 3 height: -0.360034
+Tank 4 height: -0.956953
+Tank 5 height: -0.226364
+Tank 6 height: -0.046070

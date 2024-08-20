@@ -1,0 +1,93 @@
+epoch=0
+Tank 1 height: 61.157887
+Tank 2 height: 50.584862
+
+Total Loss: 64018764.0000
+Momentum Losses: 209222.0469
+Continuity Losses: 24612780.0000, 18483782.0000
+IC Losses: N/A
+
+epoch=1000
+Tank 1 height: 0.676545
+Tank 2 height: 1.272023
+
+Total Loss: 18156.8516
+Momentum Losses: 111.5351
+Continuity Losses: 5884.6523, 1118.6920
+IC Losses: N/A
+
+epoch=2000
+Tank 1 height: 1.755230
+Tank 2 height: 0.775610
+
+Total Loss: 30008.3477
+Momentum Losses: 95.0852
+Continuity Losses: 20122.1582, 377.6676
+IC Losses: N/A
+
+epoch=3000
+Tank 1 height: 0.025417
+Tank 2 height: 1.468379
+
+Total Loss: 15944.1680
+Momentum Losses: 122.7106
+Continuity Losses: 2235.9917, 1437.1138
+IC Losses: N/A
+
+epoch=4000
+Tank 1 height: 0.744952
+Tank 2 height: 1.056734
+
+Total Loss: 16664.8379
+Momentum Losses: 126.2576
+Continuity Losses: 3230.0857, 808.9906
+IC Losses: N/A
+
+epoch=5000
+Tank 1 height: 0.455452
+Tank 2 height: 1.766522
+
+Total Loss: 18539.0547
+Momentum Losses: 140.7383
+Continuity Losses: 3811.4985, 653.7270
+IC Losses: N/A
+
+epoch=6000
+Tank 1 height: 0.964402
+Tank 2 height: 0.810522
+
+Total Loss: 15657.1162
+Momentum Losses: 111.1421
+Continuity Losses: 2986.0771, 1556.8260
+IC Losses: N/A
+
+epoch=7000
+Tank 1 height: 1.375819
+Tank 2 height: 1.521028
+
+Total Loss: 30158.6289
+Momentum Losses: 161.7752
+Continuity Losses: 5805.0693, 8176.0444
+IC Losses: N/A
+
+epoch=8000
+Tank 1 height: 0.401269
+Tank 2 height: 4.381216
+
+Total Loss: 18811.5664
+Momentum Losses: 60.9051
+Continuity Losses: 527.4881, 12193.5664
+IC Losses: N/A
+
+epoch=9000
+Tank 1 height: 0.034658
+Tank 2 height: 0.436289
+
+Total Loss: 10866.9707
+Momentum Losses: 61.5348
+Continuity Losses: 509.3741, 4204.1147
+IC Losses: N/A
+
+Tank 1 height: 0.197052
+Tank 2 height: 0.176711
+
